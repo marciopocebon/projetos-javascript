@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Exemplo js Formulario</title>
+
+    <script type="text/javascript">
+
+    </script>
+  </head>
+
+  <body>
+    <h1>Exemplo js Formulario</h1>
+
+		<form name="cadastro">
+		 <div>
+			 <input type="text" id="name" placeholder="Digite o seu nome">
+		 </div>
+
+		 <div>
+			 <input type="text" id="telephone" placeholder="Digite o seu telefone">
+		 </div>
+
+		 <div>
+			 <input type="text" id="email" placeholder="Digite o seu email">
+		 </div>
+
+		 <div>
+			 <input type="number" id="age" placeholder="Digite a sua idade">
+		 </div>
+
+    <form>
+      <button onclick="add()">Cadastrar</button>
+    </form>
+
+		<script type="text/javascript">
+			function add() {
+				var contact = {};
+				contact.name = document.getElementById("name").value;
+				contact.telephone = document.getElementById("telephone").value;
+				contact.email = document.getElementById("email").value;
+				contact.age = document.getElementById("age").value;
+				contact.ageInMonths = function x() {
+					return this.age * 12;
+				}
+				// alert("\nNome: " + contact.name
+				// 		+ "\nTelefone: " + contact.telephone
+				// 		+ "\nemail: " + contact.email
+				// 		+ "\nIdade: " + contact.age
+				// 		+ "\nIdade em meses: " + contact.ageInMonths());
+
+				alert(JSON.stringify(contact));
+			}
+		</script>
+  </body>
+</html>

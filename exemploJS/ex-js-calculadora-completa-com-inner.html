@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<title>Exemplo Calculadora básica</title>
+		<meta content="width=device-width, initial-scale=1, maximum-scale=1" name="viewport">
+		<meta charset="utf-8">
+
+		<script type="text/javascript">
+			var numero1 = Number(prompt("Digite um numero"));
+			var numero2 = Number(prompt("Digite outro numero"));
+
+      var opcao = Number(prompt("Digite:\n1-Somar\n2-Subtrair\n3-Dividir\n4-Multiplicar"))
+      switch (opcao) {
+        case 1: var resposta = numero1 + numero2;
+          break;
+        case 2: var resposta = numero1 - numero2;
+          break;
+        case 3: var resposta = numero1 / numero2;
+          break;
+        case 4: var resposta = numero1 * numero2;
+          break;
+      }
+		</script>
+	</head>
+
+	<body>
+		<h1>Exemplo Calculadora básica</h1>
+
+    <div id="resposta" style="background-color: #f98000; width: 100px; height: 100px;">
+
+    </div>
+
+    <script type="text/javascript">
+			document.getElementById("resposta").innerHTML = "Resultado: " + resposta;
+    </script>
+	</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Exemplo js alterar alinhamento do titulo</title>
+  </head>
+  <body>
+    <h1 id="titulo">Exemplo js alterar alinhamento do titulo</h1>
+
+    <form>
+      <button type="button" name="button" onclick="alterarAlinhamentoTitulo()">Alterar alinhamento</button>
+    </form>
+
+    <script type="text/javascript">
+      function alterarAlinhamentoTitulo() {
+
+        var alinhamento = Number(prompt("Digite:\n1-Esquerda\n2-Direita\n3-Centro"));
+
+        if(alinhamento == 1) {
+          document.getElementById("titulo").style.textAlign = "left";
+        } else if(alinhamento == 2) {
+          document.getElementById("titulo").style.textAlign = "right";
+        } else if(alinhamento == 3) {
+          document.getElementById("titulo").style.textAlign = "Center";
+        }
+      }
+    </script>
+  </body>
+</html>
